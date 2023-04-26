@@ -1,0 +1,4 @@
+keybinding:
+  files:
+    openStatusFilter: '<c-v>'
+
