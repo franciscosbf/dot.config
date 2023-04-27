@@ -36,9 +36,6 @@ alias qman='wikiman'
 IGNORE="" # e.g. a,b,c,...
 alias yay='yay --aur'
 
-# Minikube kubectl 
-alias kb='minikube kubectl --'
-
 # Remove unnecessary packages, excluding those that u want to remain 
 STAY="cmake|gcc" # e.g. a|b|...
 pacre() {
