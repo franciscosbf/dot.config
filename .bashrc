@@ -69,9 +69,6 @@ extract() {
 # Remove duplicated commands from history file
 export HISTCONTROL=ignoreboth:erasedups
 
-# Add local bin to PATH
-export PATH=$PATH:$HOME/.local/bin
-
 # Add go bin to PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
