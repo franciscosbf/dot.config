@@ -20,6 +20,9 @@ exec --no-startup-id blueberry-tray
 # Background.
 exec --no-startup-id feh --bg-scale --zoom fill ~/Pictures/Wallpapers/Current/wallpaper
 
+# Use tabs by default
+workspace_layout tabbed
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 10
@@ -48,7 +51,6 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +2 
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -2 --max-volume 100
 bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
