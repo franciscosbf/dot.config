@@ -266,7 +266,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Change tab width 
-local tab_width = 4
+local tab_width = 2
 vim.opt.tabstop = tab_width
 vim.opt.shiftwidth = tab_width
 vim.opt.softtabstop = tab_width
