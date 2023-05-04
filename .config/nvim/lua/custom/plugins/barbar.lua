@@ -2,20 +2,21 @@ return {
   'romgrk/barbar.nvim',
   dependencies = 'nvim-tree/nvim-web-devicons',
   init = function() vim.g.barbar_auto_setup = false end,
-  opts = {
-    -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-    -- insert_at_start = true,
-    -- …etc.
-    -- Enable/disable animations
-    animation = true,
-    -- Enable/disable auto-hiding the tab bar when there is a single buffer
-    auto_hide = false,
-    -- Enables/disable clickable tabs
-    --  - left-click: go to buffer
-    --  - middle-click: delete buffer
-    clickable = true,
-  },
   config = function()
+    require'barbar'.setup({
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- insert_at_start = true,
+      -- …etc.
+      -- Enable/disable animations
+      animation = false,
+      -- Enable/disable auto-hiding the tab bar when there is a single buffer
+      auto_hide = true,
+      -- Enables/disable clickable tabs
+      --  - left-click: go to buffer
+      --  - middle-click: delete buffer
+      clickable = true,
+    })
+
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = true }
 
