@@ -265,12 +265,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
--- Change tab width 
-local tab_width = 2
-vim.opt.tabstop = tab_width
-vim.opt.shiftwidth = tab_width
-vim.opt.softtabstop = tab_width
-
 -- Add comment on newline
 -- c -> Auto-wrap comments using textwidth, inserting the current comment leader automatically.
 -- r -> Automatically insert the current comment leader after hitting <Enter> in Insert mode.
@@ -540,7 +534,7 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    -- WARN: I guess this is causing some undesired
+    -- WARN: I guess this is causing some undesired 
     -- behaviour while pressing tab for identation...
     -- ['<Tab>'] = cmp.mapping(function(fallback)
     --   if cmp.visible() then
