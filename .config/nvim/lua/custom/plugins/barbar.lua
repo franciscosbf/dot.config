@@ -10,11 +10,15 @@ return {
       -- Enable/disable animations
       animation = false,
       -- Enable/disable auto-hiding the tab bar when there is a single buffer
-      auto_hide = true,
+      auto_hide = false,
       -- Enables/disable clickable tabs
       --  - left-click: go to buffer
       --  - middle-click: delete buffer
       clickable = true,
+      icons = {
+        button = '×', -- Close button
+        inactive = {button = ''},
+      }
     })
 
     local map = vim.api.nvim_set_keymap
