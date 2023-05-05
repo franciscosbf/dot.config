@@ -265,6 +265,12 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- Set tab width
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 -- Add comment on newline
 -- c -> Auto-wrap comments using textwidth, inserting the current comment leader automatically.
 -- r -> Automatically insert the current comment leader after hitting <Enter> in Insert mode.
