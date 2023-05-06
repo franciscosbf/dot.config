@@ -23,13 +23,13 @@ order += "tztime local"
 volume master {
         format = "🔉 %volume"
         format_muted = "🔇 %volume"
-		device = "pulse"
+        device = "pulse"
 }
 
 cpu_usage {
         format = "💻 %usage"
-		max_threshold = 90
-		degraded_threshold = 50
+        max_threshold = 90
+        degraded_threshold = 50
 }
 
 wireless _first_ {
@@ -45,10 +45,10 @@ ethernet _first_ {
 battery all {
         format = "%status %percentage"
         format_down = "No battery"
-        status_chr = "⚡"
-		status_bat = "🔋"
+        status_chr = "🔌"
+        status_bat = "🔋"
         status_unk = "? UNK"
-        status_full = "🔋"
+        status_full = "🚀"
         last_full_capacity = true
 }
 
@@ -65,3 +65,4 @@ memory {
 tztime local {
         format = "%m-%d-%Y %I:%M %p"
 }
+
