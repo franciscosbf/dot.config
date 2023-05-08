@@ -11,9 +11,6 @@
 
 set $mod Mod4
 
-# Start compositor.
-exec --no-startup-id picom -b --config ~/.config/picom.conf
-
 # BLuetooth icon.
 exec --no-startup-id blueberry-tray
 
