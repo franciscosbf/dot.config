@@ -153,8 +153,8 @@ extract() {
   fi
 }
 
-# TODO: Remove duplicated commands from history file
-# export HISTCONTROL=ignoreboth:erasedups
+#Remove duplicated commands from history file
+setopt HIST_IGNORE_ALL_DUPS
 
 # Add go bin to PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
