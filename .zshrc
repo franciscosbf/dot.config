@@ -106,7 +106,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
 fi
 
 # direnv
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 
 # Miscellaneous aliases
 alias myip='echo "External IP: $(curl -s ipinfo.io/ip)"'
