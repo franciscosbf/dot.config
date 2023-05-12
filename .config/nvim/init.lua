@@ -485,7 +485,6 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  clangd = {},
   gopls = {},
   pyright = {},
   tsserver = {},
@@ -513,6 +512,9 @@ local mason_lspconfig = require 'mason-lspconfig'
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
+
+-- Mason lspconfig doesn't know ccls
+servers["ccls"] = {}
 
 mason_lspconfig.setup_handlers {
   function(server_name)
