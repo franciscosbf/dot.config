@@ -22,11 +22,12 @@ return {
         diagnostics = 'nvim_lsp',
         diagnostics_update_in_insert = true,
         diagnostics_indicator = function(_, _, diagnostics_dict, _)
-          local s = ' '
+          local s = ''
           for e, n in pairs(diagnostics_dict) do
-            local sym = e == 'error' and ' '
-                or (e == 'warning' and ' ' or '¡ ' )
-            s = s .. n .. sym
+            local sym = e == 'error' and '  '
+                or (e == 'warning' and '  ')
+                or (e == 'hint' and ' 󰌶 ' or '  ')
+            s = s .. sym .. n
           end
           return s
         end
