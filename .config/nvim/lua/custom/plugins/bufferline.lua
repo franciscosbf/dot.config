@@ -16,6 +16,7 @@ return {
           return string.format('%s', opts.ordinal)
         end,
         buffer_close_icon = '×',
+        modified_icon = '•',
         style_preset = {
           bufferline.style_preset.no_italic,
           bufferline.style_preset.no_bold
