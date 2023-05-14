@@ -10,9 +10,10 @@ return {
     bufferline.setup({
       -- custom config goes here
       options = {
+        separator_style = 'thick',
         show_buffer_icons = true,
         numbers = function(opts)
-          return string.format('%s ·', opts.ordinal)
+          return string.format('%s', opts.ordinal)
         end,
         buffer_close_icon = '×',
         style_preset = {
