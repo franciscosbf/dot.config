@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+# Start picom.
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
+
 # BLuetooth icon.
 exec --no-startup-id blueberry-tray
 
