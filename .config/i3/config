@@ -13,9 +13,8 @@ set $mod Mod4
 
 # Values meaning, respectively:
 # - standby / suspend / turn off the screen
-# Suspend - 45 minutes (2700 seconds)
-# Idling  - 30 minutes (1800 seconds)
-exec_always --no-startup-id xset dpms 0 2700 1800
+# Idling - 45 minutes (2700 seconds)
+exec_always --no-startup-id xset dpms 0 0 2700
 
 # Start picom.
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
