@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+# Disable screen saver.
+exec_always --no-startup-id xset s off
+
 # Values meaning, respectively:
 # - standby / suspend / turn off the screen
 # Idling - 45 minutes (2700 seconds)
