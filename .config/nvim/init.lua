@@ -514,7 +514,10 @@ mason_lspconfig.setup {
 }
 
 -- Mason lspconfig doesn't know ccls
-servers["ccls"] = {}
+require('lspconfig').ccls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
 
 mason_lspconfig.setup_handlers {
   function(server_name)
