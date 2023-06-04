@@ -517,6 +517,11 @@ mason_lspconfig.setup {
 require('lspconfig').ccls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
+  init_options = {
+    index = {
+      threads = 4;
+    };
+  },
 }
 
 mason_lspconfig.setup_handlers {
