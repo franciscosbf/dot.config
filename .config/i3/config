@@ -219,7 +219,9 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Screenshots
-bindsym Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/Sreenshot from $(date '+%Y-%m-%d %H-%M-%S').png"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/Sreenshot from $(date '+%Y-%m-%d %H-%M-%S').png"
-bindsym Shift+Print exec --no-startup-id maim --select "$HOME/Pictures/Screenshots/Sreenshot from $(date '+%Y-%m-%d %H-%M-%S').png"
+bindsym Print exec --no-startup-id flameshot screen -c
+bindsym $mod+Print exec --no-startup-id flameshot gui -c
+# bindsym Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/Sreenshot from $(date '+%Y-%m-%d %H:%M:%S').png"
+# bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/Sreenshot from $(date '+%Y-%m-%d %H:%M:%S').png"
+# bindsym Shift+Print exec --no-startup-id maim --select "$HOME/Pictures/Screenshots/Sreenshot from $(date '+%Y-%m-%d %H:%M:%S').png"
 
