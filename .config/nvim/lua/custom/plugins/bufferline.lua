@@ -10,6 +10,7 @@ return {
     bufferline.setup({
       -- custom config goes here
       options = {
+        sort_by = 'insert_at_end',
         separator_style = 'thick',
         show_buffer_icons = true,
         numbers = function(opts)
