@@ -26,7 +26,7 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id blueberry-tray
 
 # Background.
-exec_always --no-startup-id feh --bg-scale --zoom fill ~/Pictures/Wallpapers/Current/wallpaper
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Current/wallpaper
 
 # Use tabs by default.
 workspace_layout tabbed
