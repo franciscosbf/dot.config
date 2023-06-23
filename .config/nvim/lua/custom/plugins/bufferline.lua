@@ -11,7 +11,7 @@ return {
       -- custom config goes here
       options = {
         sort_by = 'insert_at_end',
-        separator_style = 'thick',
+        separator_style = {'', ''},
         show_buffer_icons = true,
         numbers = function(opts)
           return string.format('%s', opts.ordinal)
