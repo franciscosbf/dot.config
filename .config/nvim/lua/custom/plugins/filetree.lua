@@ -14,7 +14,7 @@ return {
       popup_border_style = "rounded",
       enable_git_status = true,
       window = {
-        position = "float", -- float is my go to
+        position = "left",
       },
       filesystem = {
           filtered_items = {
@@ -69,7 +69,7 @@ return {
             conflict  = "",
           }
         },
-      }
+      },
     }
 
     vim.cmd([[nnoremap \ :Neotree toggle reveal<cr>]])
