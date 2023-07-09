@@ -1,6 +1,9 @@
 return {
   -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = true,
+  },
 
   -- add gruvbox material
   {
