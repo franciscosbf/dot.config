@@ -2,10 +2,10 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- bufferline
-
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+
+-- bufferline
 
 -- Move to previous/next
 map("n", "<A-,>", "<Cmd>BufferLineCyclePrev<CR>", opts)
@@ -26,3 +26,7 @@ map("n", "<A-9>", "<Cmd>BufferLineGoToBuffer  9<CR>", opts)
 map("n", "<A-0>", "<Cmd>BufferLineGoToBuffer -1<CR>", opts)
 -- Close buffer pick
 map("n", "<A-c>", "<Cmd>BufferLinePickClose<CR>", opts)
+
+-- markdown-preview
+
+map("n", "<A-p>", "<Cmd>MarkdownPreviewToggle<CR>", opts)
