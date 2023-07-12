@@ -5,7 +5,7 @@ return {
     lazy = true,
     branch = "main",
     config = function()
-      vim.g.gruvbox_baby_background_color = "dark"
+      vim.g.gruvbox_baby_background_color = "medium"
       vim.g.gruvbox_baby_use_original_palette = true
     end,
   },
@@ -25,7 +25,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-baby",
+      colorscheme = "gruvbox-material",
     },
   },
 }
