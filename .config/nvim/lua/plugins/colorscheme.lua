@@ -1,18 +1,12 @@
 return {
-  -- add gruvbox
+  -- add gruvbox-baby
   {
-    "ellisonleao/gruvbox.nvim",
+    "luisiacc/gruvbox-baby",
     lazy = true,
+    branch = "main",
     config = function()
-      require("gruvbox").setup({
-        italic = {
-          strings = false,
-          comments = false,
-          operators = false,
-          folds = false,
-        },
-      })
-      vim.o.background = "dark"
+      vim.g.gruvbox_baby_background_color = "dark"
+      vim.g.gruvbox_baby_use_original_palette = true
     end,
   },
 
@@ -31,7 +25,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "gruvbox-baby",
     },
   },
 }
