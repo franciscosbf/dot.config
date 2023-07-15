@@ -17,4 +17,10 @@ return {
 
   -- add python language
   { import = "lazyvim.plugins.extras.lang.python" },
+
+  -- add docker language
+  { import = "lazyvim.plugins.extras.lang.docker" },
+
+  -- add dap
+  { import = "lazyvim.plugins.extras.dap.core" },
 }
