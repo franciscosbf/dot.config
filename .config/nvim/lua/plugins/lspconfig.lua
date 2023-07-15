@@ -93,11 +93,10 @@ return {
                 unusedwrite = true,
                 useany = true,
               },
-              usePlaceholders = true,
+              usePlaceholders = false,
               completeUnimported = true,
               staticcheck = true,
               directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
-              semanticTokens = true,
             },
           },
         },
@@ -193,6 +192,17 @@ return {
           end
         end)
       end,
+    },
+  },
+
+  -- add docker server
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        dockerls = {},
+        docker_compose_language_service = {},
+      },
     },
   },
 }
