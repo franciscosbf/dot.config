@@ -4,3 +4,6 @@
 
 -- add line length marker
 vim.opt.colorcolumn = "80"
+
+-- add python dedicated environment with pynvim installed.
+vim.g.python3_host_prog = "~/.config/nvim-env/bin/python3"
