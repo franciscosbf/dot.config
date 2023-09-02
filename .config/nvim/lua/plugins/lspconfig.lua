@@ -1,12 +1,9 @@
 return {
-  -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
     dependencies = { "jose-elias-alvarez/typescript.nvim" },
     opts = {
-      -- make sure mason installs the server
       servers = {
-        ---@type lspconfig.options.tsserver
         tsserver = {
           keys = {
             { "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", desc = "Organize Imports" },
@@ -32,21 +29,6 @@ return {
             },
           },
         },
-      },
-      setup = {
-        tsserver = function(_, opts)
-          require("typescript").setup({ server = opts })
-          return true
-        end,
-      },
-    },
-  },
-
-  -- add gopls and server & setup
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
         gopls = {
           keys = {
             -- Workaround for the lack of a DAP strategy in neotest-go: https://github.com/nvim-neotest/neotest-go/issues/12
@@ -65,15 +47,7 @@ return {
                 upgrade_dependency = true,
                 vendor = true,
               },
-              hints = {
-                assignVariableTypes = true,
-                compositeLiteralFields = true,
-                compositeLiteralTypes = true,
-                constantValues = true,
-                functionTypeParameters = false,
-                parameterNames = false,
-                rangeVariableTypes = true,
-              },
+              hints = {},
               analyses = {
                 fieldalignment = true,
                 nilness = true,
@@ -89,38 +63,6 @@ return {
             },
           },
         },
-      },
-      setup = {
-        gopls = function(_, opts)
-          -- workaround for gopls not supporting semanticTokensProvider
-          -- https://github.com/golang/go/issues/54531#issuecomment-1464982242
-          require("lazyvim.util").on_attach(function(client, _)
-            if client.name == "gopls" then
-              if not client.server_capabilities.semanticTokensProvider then
-                local semantic = client.config.capabilities.textDocument.semanticTokens
-                client.server_capabilities.semanticTokensProvider = {
-                  full = true,
-                  legend = {
-                    tokenTypes = semantic.tokenTypes,
-                    tokenModifiers = semantic.tokenModifiers,
-                  },
-                  range = true,
-                }
-              end
-            end
-          end)
-          -- end workaround
-        end,
-      },
-    },
-  },
-
-  -- correctly setup lspconfig for clangd
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        -- Ensure mason installs the server
         clangd = {
           keys = {
             { "<leader>cR", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
@@ -152,45 +94,49 @@ return {
             clangdFileStatus = true,
           },
         },
+        pyright = {},
+        ruff_lsp = {},
+        dockerls = {},
+        docker_compose_language_service = {},
       },
       setup = {
+        tsserver = function(_, opts)
+          require("typescript").setup({ server = opts })
+          return true
+        end,
+        gopls = function(_, opts)
+          -- workaround for gopls not supporting semanticTokensProvider
+          -- https://github.com/golang/go/issues/54531#issuecomment-1464982242
+          require("lazyvim.util").on_attach(function(client, _)
+            if client.name == "gopls" then
+              if not client.server_capabilities.semanticTokensProvider then
+                local semantic = client.config.capabilities.textDocument.semanticTokens
+                client.server_capabilities.semanticTokensProvider = {
+                  full = true,
+                  legend = {
+                    tokenTypes = semantic.tokenTypes,
+                    tokenModifiers = semantic.tokenModifiers,
+                  },
+                  range = true,
+                }
+              end
+            end
+          end)
+          -- end workaround
+        end,
         clangd = function(_, opts)
           local clangd_ext_opts = require("lazyvim.util").opts("clangd_extensions.nvim")
           require("clangd_extensions").setup(vim.tbl_deep_extend("force", clangd_ext_opts or {}, { server = opts }))
           return true
         end,
-      },
-    },
-  },
-
-  -- add python server
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        pyright = {},
-        ruff_lsp = {},
-      },
-    },
-    setup = {
-      ruff_lsp = function()
-        require("lazyvim.util").on_attach(function(client, _)
-          if client.name == "ruff_lsp" then
-            -- Disable hover in favor of Pyright
-            client.server_capabilities.hoverProvider = false
-          end
-        end)
-      end,
-    },
-  },
-
-  -- add docker server
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        dockerls = {},
-        docker_compose_language_service = {},
+        ruff_lsp = function()
+          require("lazyvim.util").on_attach(function(client, _)
+            if client.name == "ruff_lsp" then
+              -- Disable hover in favor of Pyright
+              client.server_capabilities.hoverProvider = false
+            end
+          end)
+        end,
       },
     },
   },
