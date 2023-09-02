@@ -2,33 +2,20 @@ return {
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "bash",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-        "go",
-        "gomod",
-        "gowork",
-        "gosum",
-        "c",
-        "cpp",
-        "make",
-        "ninja",
-        "python",
-        "rst",
-        "toml",
-      },
-    },
+    opts = function(_, opts)
+      if type(opts.ensure_installed) == "table" then
+        vim.list_extend(opts.ensure_installed, {
+          "bash",
+          "html",
+          "markdown",
+          "markdown_inline",
+          "javascript",
+          "lua",
+          "regex",
+          "vim",
+          "make",
+        })
+      end
+    end,
   },
 }
