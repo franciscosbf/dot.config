@@ -1,20 +1,4 @@
 return {
-  -- add pyright, gopls, tsserver, dockerls and rust_analyzer to lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        pyright = {},
-        gopls = {},
-        tsserver = {},
-        dockerls = {},
-        rust_analyzer = {},
-      },
-    },
-  },
-
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
