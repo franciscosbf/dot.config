@@ -47,7 +47,15 @@ return {
                 upgrade_dependency = true,
                 vendor = true,
               },
-              hints = {},
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
               analyses = {
                 fieldalignment = true,
                 nilness = true,
@@ -59,7 +67,7 @@ return {
               completeUnimported = true,
               staticcheck = true,
               directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
-              semanticTokens = true,
+              semanticTokens = false, -- never activate this crap again... it brokes gruvbox-material theme
             },
           },
         },
