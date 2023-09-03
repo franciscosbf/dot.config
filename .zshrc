@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang docker docker-compose minikube kubectl)
+plugins=(git golang docker docker-compose minikube kubectl zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -144,7 +144,7 @@ extract() {
       *.zip)     unzip $1      ;;
       *.Z)       uncompress $1 ;;
       *.tar.xz)  tar xf $1     ;;
-      *.tar.zst) unzstd $1     ;;   
+      *.tar.zst) unzstd $1     ;;
       *.gz)      gzip -dk $1   ;;
       *)         echo "Couldn't match any format for $1";;
     esac
@@ -158,4 +158,3 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Add go bin to PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
-
