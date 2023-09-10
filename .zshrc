@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang docker docker-compose minikube kubectl)
+plugins=(git golang docker docker-compose minikube kubectl zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Ensures tilix gets all necessary information from /etc/profile.d 
+# Ensures tilix gets all necessary information from /etc/profile.d
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
     source /etc/profile.d/vte.sh
 fi
@@ -118,14 +118,14 @@ alias rm='rm -vi'
 alias rmd='rm -rf'
 alias cp='cp -vi'
 alias ll='ls -ialF'
-alias qman='wikiman'  
+alias qman='wikiman'
 
 # Keep pacman and yay separated + ignore some updates
 IGNORE="" # e.g. a,b,c,...
 alias yay='yay --aur'
 
-# Remove unnecessary packages, excluding those that u want to remain 
-STAY="cmake|gcc" # e.g. a|b|...
+# Remove unnecessary packages, excluding those that u want to remain
+STAY="" # e.g. a|b|...
 pacre() {
     pacman -Qtd | awk '!/'$STAY'/{print $1}' | sudo pacman -Rns -
 }
@@ -144,7 +144,7 @@ extract() {
       *.zip)     unzip $1      ;;
       *.Z)       uncompress $1 ;;
       *.tar.xz)  tar xf $1     ;;
-      *.tar.zst) unzstd $1     ;;   
+      *.tar.zst) unzstd $1     ;;
       *.gz)      gzip -dk $1   ;;
       *)         echo "Couldn't match any format for $1";;
     esac
@@ -153,9 +153,8 @@ extract() {
   fi
 }
 
-#Remove duplicated commands from history file
+# Remove duplicated commands from history file
 setopt HIST_IGNORE_ALL_DUPS
 
 # Add go bin to PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
-
