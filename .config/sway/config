@@ -257,12 +257,16 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-# Sreen brightness controls
+# Sreen brightness controls with brightnessctl.
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
-# Media player controls
+# Media player controls with playerctl.
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Screenshots with grim and slurp.
+bindsym Print exec --no-startup-id IMG=~/Pictures/Screenshots/"sreenshot_$(date +%Y-%m-%d_%H-%M-%S).png" && grim "$IMG" && wl-copy < "$IMG"
+bindsym $mod+Print exec --no-startup-id IMG=~/Pictures/Screenshots/"sreenshot_$(date +%Y-%m-%d_%H-%M-%S).png" && grim -g "$(slurp)" "$IMG" && wl-copy < "$IMG"
