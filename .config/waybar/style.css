@@ -169,7 +169,7 @@
 	color: @white;
 }
 
-#custom-pipewire {
+#pulseaudio.sound {
 	background: @sound;
 	color: @black;
 }
@@ -189,7 +189,7 @@
 	color: @white;
 }
 
-#pulseaudio {
+#pulseaudio.mic {
 	background: @layout;
 	color: @black;
 }

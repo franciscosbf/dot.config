@@ -13,7 +13,7 @@
 		"custom/arrow9",
 		"disk#ssd",
 		"custom/arrow8",
-		"custom/pipewire",
+		"pulseaudio#sound",
 		"custom/arrow7",
 		"network",
 		"custom/arrow6",
@@ -23,7 +23,7 @@
 		"custom/arrow4",
 		"battery",
 		"custom/arrow3",
-		"pulseaudio",
+		"pulseaudio#mic",
 		"custom/arrow2",
 		"tray",
 		"clock#date",
@@ -81,7 +81,7 @@
 			"critical": 90
 		}
 	},
-	"pulseaudio": {
+	"pulseaudio#mic": {
 		"format": "{format_source}",
 		"format-source": "Mic ON",
 		"format-source-muted": "Mic OFF"
@@ -127,6 +127,13 @@
 				"󰕾"
 			]
 		}
+	},
+	"pulseaudio#sound": {
+		"format": "{volume}%",
+		"format-bluetooth": "{volume}% ",
+		"format-muted": "MUTED",
+		"scroll-step": 1,
+		"on-click": "pavucontrol"
 	},
 	"disk#m2": {
 		"path": "/",
