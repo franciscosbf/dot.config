@@ -113,21 +113,6 @@
 		"enable-bar-scroll": true,
 		"format": "{name}"
 	},
-	"custom/pipewire": {
-		"exec": "pw-volume status",
-		"return-type": "json",
-		"interval": "once",
-		"signal": 8,
-		"format": "{icon} {percentage}",
-		"format-icons": {
-			"mute": "",
-			"default": [
-				"󰕿",
-				"󰖀",
-				"󰕾"
-			]
-		}
-	},
 	"pulseaudio#sound": {
 		"format": "{volume}%",
 		"format-bluetooth": "{volume}% ",
