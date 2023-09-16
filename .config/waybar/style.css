@@ -26,6 +26,7 @@
 @define-color brpurple #d3869b;
 @define-color braqua #8ec07c;
 @define-color brorange #e69500;
+@define-color brtangelo #df6124;
 @define-color white #ebdbb2;
 @define-color bg2 #504945;
 
@@ -46,6 +47,7 @@
 @define-color time @white;
 @define-color ssd @brblue;
 @define-color m2 @brorange;
+@define-color backlight @brtangelo;
 
 /* Reset all styles */
 * {
@@ -69,6 +71,7 @@
 }
 
 /* Each module */
+#backlight,
 #disk,
 #battery,
 #clock,
@@ -148,6 +151,11 @@
 /* Style when cursor is on the button */
 #workspaces button:hover {
 	background: @black;
+	color: @white;
+}
+
+#backlight {
+	background: @backlight;
 	color: @white;
 }
 
@@ -262,5 +270,11 @@
 #custom-arrow10 {
 	font-size: 11pt;
 	color: @m2;
+	background: @backlight;
+}
+
+#custom-arrow11 {
+	font-size: 11pt;
+	color: @backlight;
 	background: transparent;
 }

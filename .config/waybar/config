@@ -6,6 +6,8 @@
 		"sway/workspaces"
 	],
 	"modules-right": [
+		"custom/arrow11",
+		"backlight",
 		"custom/arrow10",
 		"disk#m2",
 		"custom/arrow9",
@@ -29,6 +31,15 @@
 		"clock#time"
 	],
 	// Modules
+	"backlight": {
+		"format": "{percent}% {icon}",
+		"format-icons": [
+			"",
+			""
+		],
+		"on-scroll-up": "brightnessctl -c backlight set +5%",
+		"on-scroll-down": "brightnessctl -c backlight set 5%-"
+	},
 	"battery": {
 		"interval": 5,
 		"states": {
@@ -168,6 +179,10 @@
 		"tooltip": false
 	},
 	"custom/arrow10": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/arrow11": {
 		"format": "",
 		"tooltip": false
 	}
