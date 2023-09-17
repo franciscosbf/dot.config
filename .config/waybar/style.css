@@ -25,7 +25,7 @@
 @define-color brblue #83a598;
 @define-color brpurple #d3869b;
 @define-color braqua #8ec07c;
-@define-color brorange #e69500;
+@define-color brorange #cc8400;
 @define-color brtangelo #df6124;
 @define-color white #ebdbb2;
 @define-color bg2 #504945;
@@ -168,7 +168,7 @@
 
 #disk.ssd {
 	background: @ssd;
-	color: @white;
+	color: @black;
 }
 
 #disk.m2 {
