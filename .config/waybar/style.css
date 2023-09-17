@@ -67,7 +67,7 @@
 	background: rgba(40, 40, 40, 1); /* #282828e0 */
 	color: @white;
 	font-family: JetBrains Mono, Siji;
-	font-size: 10pt;
+	font-size: 14px;
 	font-weight: bold;
 }
 
