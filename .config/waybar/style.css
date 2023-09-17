@@ -207,7 +207,7 @@
 }
 
 #tray {
-	background: @date;
+	background: @transparent;
 }
 
 #clock.date {

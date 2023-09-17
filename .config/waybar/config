@@ -6,6 +6,7 @@
 		"sway/workspaces"
 	],
 	"modules-right": [
+		"tray",
 		"custom/arrow12",
 		"temperature",
 		"custom/arrow11",
@@ -27,7 +28,6 @@
 		"custom/arrow3",
 		"pulseaudio#mic",
 		"custom/arrow2",
-		"tray",
 		"clock#date",
 		"custom/arrow1",
 		"clock#time"
