@@ -40,7 +40,8 @@
 			""
 		],
 		"on-scroll-up": "brightnessctl -c backlight set +5%",
-		"on-scroll-down": "brightnessctl -c backlight set 5%-"
+		"on-scroll-down": "brightnessctl -c backlight set 5%-",
+		"tooltip": false
 	},
 	"battery": {
 		"interval": 5,
@@ -86,7 +87,8 @@
 		"format": "{format_source}",
 		"format-source": "Mic ON",
 		"format-source-muted": "Mic OFF",
-		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"tooltip": false
 	},
 	"memory": {
 		"interval": 5,
