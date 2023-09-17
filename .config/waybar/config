@@ -84,7 +84,8 @@
 	"pulseaudio#mic": {
 		"format": "{format_source}",
 		"format-source": "Mic ON",
-		"format-source-muted": "Mic OFF"
+		"format-source-muted": "Mic OFF",
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 	},
 	"memory": {
 		"interval": 5,
@@ -114,8 +115,8 @@
 		"format": "{name}"
 	},
 	"pulseaudio#sound": {
-		"format": "{volume}%",
-		"format-bluetooth": "{volume}% ",
+		"format": "♫ {volume}%",
+		"format-bluetooth": "♫ {volume}% ",
 		"format-muted": "MUTED",
 		"scroll-step": 1,
 		"on-click": "pavucontrol"
