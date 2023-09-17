@@ -48,6 +48,7 @@
 @define-color ssd @brblue;
 @define-color m2 @brorange;
 @define-color backlight @brtangelo;
+@define-color temperature @brgray;
 
 /* Reset all styles */
 * {
@@ -71,6 +72,7 @@
 }
 
 /* Each module */
+#temperature,
 #backlight,
 #disk,
 #battery,
@@ -151,6 +153,11 @@
 /* Style when cursor is on the button */
 #workspaces button:hover {
 	background: @black;
+	color: @white;
+}
+
+#temperature {
+	background: @temperature;
 	color: @white;
 }
 
@@ -276,5 +283,11 @@
 #custom-arrow11 {
 	font-size: 11pt;
 	color: @backlight;
+	background: @temperature;
+}
+
+#custom-arrow12 {
+	font-size: 11pt;
+	color: @temperature;
 	background: transparent;
 }
