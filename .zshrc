@@ -146,6 +146,7 @@ extract() {
       *.tar.xz)  tar xf $1     ;;
       *.tar.zst) unzstd $1     ;;
       *.gz)      gzip -dk $1   ;;
+      *.7z)      7za x $1      ;;
       *)         echo "Couldn't match any format for $1";;
     esac
   else
