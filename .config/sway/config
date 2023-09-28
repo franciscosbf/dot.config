@@ -232,7 +232,7 @@ bar {
 gaps outer 8
 gaps inner 10
 smart_gaps inverse_outer
-default_border pixel 3
+default_border pixel 6
 
 # Gruvbox mapped colors.
 set $bg            #d65d0e
