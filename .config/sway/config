@@ -72,7 +72,7 @@ input type:touchpad {
 # Mouse settings.
 input type:pointer {
     natural_scroll disabled
-    pointer_accel -0.4
+    pointer_accel -0.7
 }
 
 #
