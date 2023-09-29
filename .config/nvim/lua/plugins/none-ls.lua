@@ -1,7 +1,8 @@
 return {
   -- ensure go tools are installed.
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
+    optional = true,
     opts = function(_, opts)
       if type(opts.sources) == "table" then
         local nls = require("null-ls")
@@ -12,14 +13,6 @@ return {
           nls.builtins.formatting.goimports_reviser,
         })
       end
-    end,
-  },
-
-  -- add typescript code actions.
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    opts = function(_, opts)
-      table.insert(opts.sources, require("typescript.extensions.null-ls.code-actions"))
     end,
   },
 }
