@@ -1,4 +1,7 @@
 return {
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim" },
+
   -- add gruvbox material
   {
     "sainnhe/gruvbox-material",
@@ -8,6 +11,11 @@ return {
     },
     lazy = true,
     config = function()
+      -- TODO:
+
+      -- WARN:
+
+      -- INFO:
       vim.o.background = "dark"
       vim.g.gruvbox_material_background = "medium"
       vim.g.gruvbox_material_foreground = "hard"
@@ -19,7 +27,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "gruvbox",
     },
   },
 }
