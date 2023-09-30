@@ -2,6 +2,7 @@ return {
   -- neotest adapters.
   { "nvim-neotest/neotest-go" },
   { "nvim-neotest/neotest-python" },
+  { "rouge8/neotest-rust" },
 
   {
     "nvim-neotest/neotest",
@@ -12,6 +13,7 @@ return {
     },
     opts = {
       adapters = {
+        ["neotest-rust"] = {},
         ["neotest-go"] = {
           -- Here we can set options for neotest-go, e.g.
           -- args = { "-tags=integration" }
