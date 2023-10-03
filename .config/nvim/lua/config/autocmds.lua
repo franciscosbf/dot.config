@@ -4,7 +4,7 @@
 
 -- Disable autoformat for rust and go files.
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "rust", "go" },
+  pattern = { "rust", "go", "c" },
   callback = function()
     vim.b.autoformat = false
   end,
