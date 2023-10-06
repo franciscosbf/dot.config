@@ -223,6 +223,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Bind workspace gestures.
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+
 # Status Bar.
 bar {
     swaybar_command waybar
