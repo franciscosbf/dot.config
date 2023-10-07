@@ -287,8 +287,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Screenshots with grim and slurp.
-bindsym Print exec --no-startup-id IMG=~/Pictures/Screenshots/"sreenshot_$(date +%Y-%m-%d_%H-%M-%S).png" && grim "$IMG" && wl-copy < "$IMG"
-bindsym $mod+Print exec --no-startup-id IMG=~/Pictures/Screenshots/"sreenshot_$(date +%Y-%m-%d_%H-%M-%S).png" && grim -g "$(slurp)" "$IMG" && wl-copy < "$IMG"
+bindsym Print exec --no-startup-id IMG=~/Pictures/Screenshots/"screenshot_$(date +%Y-%m-%d_%H-%M-%S).png" && grim "$IMG" && wl-copy < "$IMG"
+bindsym $mod+Print exec --no-startup-id IMG=~/Pictures/Screenshots/"screenshot_$(date +%Y-%m-%d_%H-%M-%S).png" && grim -g "$(slurp)" "$IMG" && wl-copy < "$IMG"
 
 include /etc/sway/config.d/*
 
