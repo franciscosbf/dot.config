@@ -11,11 +11,6 @@ return {
     },
     lazy = true,
     config = function()
-      -- TODO:
-
-      -- WARN:
-
-      -- INFO:
       vim.o.background = "dark"
       vim.g.gruvbox_material_background = "medium"
       vim.g.gruvbox_material_foreground = "hard"
