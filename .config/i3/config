@@ -19,11 +19,11 @@ exec_always --no-startup-id xset s off
 # Idling - 45 minutes (2700 seconds)
 exec_always --no-startup-id xset dpms 0 0 2700
 
-# Start picom.
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf
+# Start dunst.
+exec_always --no-startup-id dunst
 
-# BLuetooth icon.
-exec --no-startup-id blueberry-tray
+# Bluetooth icon.
+exec_always --no-startup-id blueberry-tray
 
 # Background.
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Current/wallpaper
