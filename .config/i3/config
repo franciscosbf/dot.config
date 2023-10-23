@@ -25,6 +25,9 @@ exec --no-startup-id dunst
 # Bluetooth icon.
 exec --no-startup-id blueberry-tray
 
+# Start gnome polkit.
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # Background.
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Current/wallpaper
 
