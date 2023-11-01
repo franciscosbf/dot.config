@@ -13,6 +13,3 @@ vim.g.loaded_ruby_provider = 0
 
 -- disable perl provider
 vim.g.loaded_perl_provider = 0
-
--- unset this for now...
--- vim.cmd([[set nolist]])
