@@ -19,6 +19,7 @@ order += "disk /ssd"
 order += "memory"
 order += "cpu_usage"
 order += "battery all"
+order += "cpu_temperature 0"
 order += "tztime local"
 
 volume master {
@@ -51,6 +52,12 @@ battery all {
         status_unk = "? UNK"
         status_full = "🚀"
         last_full_capacity = true
+}
+
+cpu_temperature 0 {
+        format = "🔥 %degrees °C"
+        max_threshold = 42
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 }
 
 disk "/" {
