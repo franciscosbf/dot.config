@@ -14,6 +14,7 @@ return {
           "regex",
           "vim",
           "make",
+          "erlang",
         })
       end
     end,
