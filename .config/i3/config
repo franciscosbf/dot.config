@@ -22,9 +22,6 @@ exec_always --no-startup-id xset dpms 0 0 2700
 # Start dunst.
 exec --no-startup-id dunst
 
-# Bluetooth icon (replaced by blueman-applet).
-# exec --no-startup-id blueberry-tray
-
 # Start gnome polkit.
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
