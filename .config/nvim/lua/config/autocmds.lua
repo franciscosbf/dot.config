@@ -2,9 +2,9 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- Disable autoformat for rust, go, c, cuda, sh and erlang files.
+-- Disable autoformat for all kind of files.
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "rust", "go", "c", "cuda", "sh", "erlang" },
+  pattern = { "*" },
   callback = function()
     vim.b.autoformat = false
   end,
