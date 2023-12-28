@@ -208,7 +208,7 @@ bar {
         status_command i3status
 }
 
-# Addjust window border and inner outer gaps.
+# Adjust window border and inner outer gaps.
 for_window [class="^.*"] border pixel 4
 gaps inner 8
 gaps outer 4
