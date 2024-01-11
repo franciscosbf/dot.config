@@ -173,4 +173,4 @@ nnn_cd()
 trap nnn_cd EXIT
 
 # Add cargo bins folder to PATH
-export PATH="$PATH:~/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
