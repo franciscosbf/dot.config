@@ -159,3 +159,18 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Add go bin to PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+
+# Invoke plugins directly using the plugin shortcut with nnn.
+export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
+
+# Configure nnn to cd to the $PWD of the exited subshell.
+nnn_cd()
+{
+    if ! [ -z "$NNN_PIPE" ]; then
+        printf "%s\0" "0c${PWD}" > "${NNN_PIPE}" !&
+    fi
+}
+trap nnn_cd EXIT
+
+# Add cargo bins folder to PATH
+export PATH="$PATH:~/.cargo/bin"
