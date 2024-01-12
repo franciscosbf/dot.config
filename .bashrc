@@ -71,14 +71,8 @@ export HISTCONTROL=ignoreboth:erasedups
 # Add go bin to PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
-# Add locations to $PATH from $HOME
-add_paths() {
-	HPS=""
-	for location in $@; do
-		HPS=$HPS:$HOME/$location
-	done
-	export PATH=$PATH:$HPS
-}
-
-# Add cargo bins folder to PATH
+# Add cargo bin to PATH
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# Add local bin to PATH
+export PATH="$PATH:$HOME/.local/bin"
