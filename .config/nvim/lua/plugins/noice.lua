@@ -1,7 +1,6 @@
 return {
   {
     "folke/noice.nvim",
-    event = "VeryLazy",
     opts = {
       presets = {
         bottom_search = false,
@@ -12,6 +11,10 @@ return {
       cmdline = {
         enabled = true,
         view = "cmdline",
+      },
+      notify = {
+        enabled = true,
+        view = "mini",
       },
     },
   },
