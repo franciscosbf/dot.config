@@ -8,6 +8,7 @@ return {
             ["rust-analyzer"] = {
               -- get rid of lens.
               lens = { enable = false },
+              check = { allTargets = false },
             },
           },
         },
