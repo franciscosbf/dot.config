@@ -177,3 +177,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # Add local bin to PATH
 export PATH="$PATH:$HOME/.local/bin"
+
+# Export openFrameworks location.
+export OF_ROOT="$HOME/of_v0.12.0_linux64gcc6_release"
