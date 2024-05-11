@@ -14,10 +14,8 @@ set $mod Mod4
 # Disable screen saver.
 exec_always --no-startup-id xset s off
 
-# Values meaning, respectively:
-# - standby / suspend / turn off the screen
-# Idling - 45 minutes (2700 seconds)
-exec_always --no-startup-id xset dpms 0 0 2700
+# Suspend.
+exec_always --no-startup-id xautolock -time 40 -locker "systemctl suspend"
 
 # Start dunst.
 exec --no-startup-id dunst
@@ -207,11 +205,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-# Increase window border and gap in inner and outer.
-# for_window [class="^.*"] border pixel 4
-# gaps inner 8
-# gaps outer 4
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 # increase screen brightness
