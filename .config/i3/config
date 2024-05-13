@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+# Disable screen saver.
+exec_always --no-startup-id xset s off
+
 # Suspend screen.
 exec_always --no-startup-id xset dpms 0 0 1800
 
