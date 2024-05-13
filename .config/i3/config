@@ -11,11 +11,11 @@
 
 set $mod Mod4
 
-# Disable screen saver.
-exec_always --no-startup-id xset s off
+# Suspend screen.
+exec_always --no-startup-id xset dpms 0 0 1800
 
-# Suspend.
-exec_always --no-startup-id xautolock -time 40 -locker "systemctl suspend"
+# Suspend pc.
+exec --no-startup-id xautolock -time 40 -locker "systemctl suspend" -corners "--00"
 
 # Start dunst.
 exec --no-startup-id dunst
