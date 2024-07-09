@@ -26,6 +26,9 @@ exec --no-startup-id dunst
 # Start gnome polkit.
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+# Start redshift.
+exec --no-startup-id redshift-gtk
+
 # Background.
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Current/wallpaper
 
