@@ -4,7 +4,7 @@
 
 -- Disable autoformat for all kind of files.
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "c", "cpp", "cmake", "cuda", "html" },
+  pattern = { "markdown", "c", "cpp", "cmake", "cuda", "html" },
   callback = function()
     vim.b.autoformat = false
   end,
