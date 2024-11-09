@@ -16,7 +16,6 @@ return {
     config = function()
       vim.cmd([[do FileType]])
 
-      -- set light as default theme.
       vim.g.mkdp_theme = "light"
     end,
   },
