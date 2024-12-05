@@ -231,5 +231,4 @@ for_window [title="Battery Warning"] sticky enable
 exec --no-startup-id i3-battery-popup -L 35 -t 2m
 
 # Setup monitors
-exec_always --no-startup-id xrandr --output eDP1 --mode 1920x1080 --primary
-exec_always --no-startup-id xrandr --output DP-1-2 --mode 1920x1080 --rate 144
+exec_always --no-startup-id xrandr --output eDP1 --primary --output DP-1-2 --same-as eDP1 --rate 144
