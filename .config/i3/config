@@ -229,7 +229,3 @@ bindsym $mod+Print exec --no-startup-id flameshot gui -c
 # Battery warning, source: https://github.com/rjekker/i3-battery-popup
 for_window [title="Battery Warning"] sticky enable
 exec --no-startup-id i3-battery-popup -L 35 -t 2m
-
-# Setup monitors
-exec_always --no-startup-id xrandr --output eDP1 --auto --primary
-exec_always --no-startup-id xrandr --output DP-1-2 --mode 1920x1080 --rate 144
