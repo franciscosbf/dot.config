@@ -21,7 +21,3 @@ map("n", "<A-8>", "<cmd>BufferLineGoToBuffer  8<cr>")
 map("n", "<A-9>", "<cmd>BufferLineGoToBuffer  9<cr>")
 map("n", "<A-0>", "<cmd>BufferLineGoToBuffer -1<cr>")
 map("n", "<A-c>", "<cmd>BufferLinePickClose<cr>")
-
-map("n", "<leader>n", function()
-  Snacks.notifier.show_history()
-end, { desc = "Show notification history" })
