@@ -11,6 +11,9 @@ return {
             },
           },
         },
+        clangd = {
+          filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
+        },
       },
     },
   },
