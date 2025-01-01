@@ -100,11 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Ensures tilix gets all necessary information from /etc/profile.d
-if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
-    source /etc/profile.d/vte.sh
-fi
-
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -178,5 +173,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # Add local bin to PATH
 export PATH="$PATH:$HOME/.local/bin"
 
-# Export openFrameworks location.
-export OF_ROOT="$HOME/of_v0.12.0_linux64gcc6_release"
+# Add texlive to PATH, MANPATH and INFOPATH
+export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
+export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
