@@ -181,36 +181,62 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-      # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-      # Pressing left will shrink the window’s width.
-      # Pressing right will grow the window’s width.
-      # Pressing up will shrink the window’s height.
-      # Pressing down will grow the window’s height.
-      bindsym j resize shrink width 10 px or 10 ppt
-      bindsym k resize grow height 10 px or 10 ppt
-      bindsym l resize shrink height 10 px or 10 ppt
-      bindsym ccedilla resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+  bindsym j resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym l resize shrink height 10 px or 10 ppt
+  bindsym ccedilla resize grow width 10 px or 10 ppt
 
-      # same bindings, but for the arrow keys
-      bindsym Left resize shrink width 10 px or 10 ppt
-      bindsym Down resize grow height 10 px or 10 ppt
-      bindsym Up resize shrink height 10 px or 10 ppt
-      bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
 
-      # back to normal: Enter or Escape or $mod+r
-      bindsym Return mode "default"
-      bindsym Escape mode "default"
-      bindsym $mod+r mode "default"
+# back to normal: Enter or Escape or $mod+r
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
+# Gruvbox Dark - color bindings
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-      status_command i3status
+  status_command i3status
+# Gruvbox Dark - bar colors
+  colors {
+    background $bg
+    statusline $yellow
+    focused_workspace    $aqua $aqua $darkgray
+    inactive_workspace   $darkgray $darkgray $yellow
+    active_workspace     $darkgray $darkgray $yellow
+    urgent_workspace     $red $red $bg
+  }
 }
+
+# Gruvbox Dark - class  border|backgr|text|indicator|child_border
+client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.urgent           $red $red $white $red $red
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 # increase screen brightness
