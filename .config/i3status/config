@@ -7,8 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 3
+  colors = true
+  interval = 3
 }
 
 order += "wireless _first_"
@@ -23,58 +23,58 @@ order += "cpu_temperature 0"
 order += "tztime local"
 
 volume master {
-        format = "🔉 %volume"
-        format_muted = "🔇 %volume"
-        device = "pulse"
+  format = "🔉 %volume"
+  format_muted = "🔇 %volume"
+  device = "pulse"
 }
 
 cpu_usage {
-        format = "💻 %usage"
-        max_threshold = 90
-        degraded_threshold = 50
+  format = "💻 %usage"
+  max_threshold = 90
+  degraded_threshold = 50
 }
 
 wireless _first_ {
-        format_up = "Wireless: (%quality at %essid)"
-        format_down = ""
+  format_up = "Wireless: (%quality at %essid)"
+  format_down = ""
 }
 
 ethernet _first_ {
-        format_up = "Ethernet: %ip"
-        format_down = ""
+  format_up = "Ethernet: %ip"
+  format_down = ""
 }
 
 battery all {
-        format = "%status %percentage"
-        format_down = "No battery"
-        status_chr = "🔌"
-        status_bat = "🔋"
-        status_unk = "? UNK"
-        status_full = "🚀"
-        last_full_capacity = true
+  format = "%status %percentage"
+  format_down = "No battery"
+  status_chr = "🔌"
+  status_bat = "🔋"
+  status_unk = "? UNK"
+  status_full = "🚀"
+  last_full_capacity = true
 }
 
 cpu_temperature 0 {
-        format = "🔥 %degrees °C"
-        max_threshold = 70
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
+  format = "🔥 %degrees °C"
+  max_threshold = 70
+  path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 }
 
 disk "/" {
-        format = "💾 %free"
+  format = "💾 %free"
 }
 
 disk "/ssd" {
-        format = "💿 %free"
+  format = "💿 %free"
 }
 
 memory {
-        format = "🧠 %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+  format = "🧠 %available"
+  threshold_degraded = "1G"
+  format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = "%A %m-%d-%Y %I:%M %p"
+  format = "%A %m-%d-%Y %I:%M %p"
 }
 
