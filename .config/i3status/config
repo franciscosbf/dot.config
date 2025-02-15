@@ -51,6 +51,7 @@ battery all {
   status_bat = "🔋"
   status_unk = "? UNK"
   status_full = "🚀"
+  status_idle = "🛢"
   last_full_capacity = true
 }
 
