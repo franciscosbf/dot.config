@@ -186,3 +186,6 @@ fi
 
 # Add maelstrom to PATH
 export PATH="$PATH:$HOME/maelstrom"
+
+# Force me to not use rm
+alias rm='echo "This is not the command you are looking for."; false'
