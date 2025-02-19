@@ -183,3 +183,6 @@ if [ -f /usr/local/share/zsh-completion/zsh_completion ]; then
 . /usr/local/share/zsh-completion/zsh_completion
 fi
 . <(kubebuilder completion zsh)
+
+# Add maelstrom to PATH
+export PATH="$PATH:$HOME/maelstrom"
