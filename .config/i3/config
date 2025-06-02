@@ -15,7 +15,7 @@ set $mod Mod4
 exec_always --no-startup-id xset s off
 
 # Suspend screen.
-# exec_always --no-startup-id xset dpms 0 0 1800
+exec_always --no-startup-id xset dpms 0 0 1800
 
 # Suspend pc.
 exec --no-startup-id xautolock -time 35 -locker "systemctl suspend" -corners "--00"
@@ -27,7 +27,8 @@ exec --no-startup-id dunst
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Start redshift.
-exec --no-startup-id redshift-gtk
+# PS: replaced by user redshift-gtk.service
+# exec --no-startup-id redshift-gtk
 
 # Background.
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Current/wallpaper
