@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+rm -f "/tmp/hmwon_cpu_temp"
+
+for i in /sys/class/hwmon/hwmon*; do
+	if [ "$(cat "$i/name")" = "coretemp" ]; then
+		ln -s "$i/temp1_input" "/tmp/hmwon_cpu_temp"
+		break
+	fi
+done
