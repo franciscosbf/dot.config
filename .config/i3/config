@@ -27,7 +27,7 @@ exec --no-startup-id dunst
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
  # Create syslink in /tmp for hwmon CPU temp file.
-exec_always --no-startup-id i3status_hwmon_cpu_temp
+exec_always --no-startup-id ~/.local/bin/i3status_hwmon_cpu_temp
 
 # Start redshift.
 # PS: replaced by user redshift-gtk.service
