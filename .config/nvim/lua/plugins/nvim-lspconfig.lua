@@ -8,6 +8,7 @@ return {
             gopls = {
               semanticTokens = false,
               usePlaceholders = false,
+              staticcheck = false,
             },
           },
         },
@@ -15,12 +16,7 @@ return {
           filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
         },
       },
-    },
-  },
 
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
       inlay_hints = { enabled = false },
     },
   },
