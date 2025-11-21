@@ -225,7 +225,7 @@ set $darkgray #1d2021
 # finds out, if available)
 bar {
   status_command i3status
-  position bottom
+  position top
 # Gruvbox Dark - bar colors
   colors {
     background $bg
