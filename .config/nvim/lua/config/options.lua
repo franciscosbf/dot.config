@@ -10,3 +10,9 @@ vim.g.loaded_ruby_provider = 0
 
 -- disable perl provider
 vim.g.loaded_perl_provider = 0
+
+-- global indentation
+vim.opt.tabstop = 4 -- number of spaces a <Tab> counts for
+vim.opt.softtabstop = 4 -- number of spaces <Tab> inserts/deletes
+vim.opt.shiftwidth = 4 -- number of spaces for each indentation step
+vim.opt.expandtab = true -- use spaces instead of tab characters
